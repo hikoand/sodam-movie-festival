@@ -26,3 +26,7 @@ a {
 a:hover {
   color: #f38200;
 }
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: transparent !important;
+}

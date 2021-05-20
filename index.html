@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>소담영화제</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="scroll page">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
+  <link rel="stylesheet" href="./css/initial.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="text/javascript" src="./js/jquery_3.5.1.js"></script>
+  <script type="text/javascript" src="./js/common.js"></script>
+</head>
+
+<body>
+
+  <!-- Top button -->
+  <div class="back_to_top">
+    <a href="#intro"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#fff">
+        <path d="M0 0h24v24H0V0z" fill="none" />
+        <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14l-6-6z" />
+      </svg></a>
+  </div>
+
+  <!-- mobile menu button -->
+  <input type="checkbox" id="gnbcheck" name="gnbcheck">
+  <label for="gnbcheck" id="gnbbtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <!-- header -->
+  <header id="header">
+    <h1 id="top_logo"><a href="#"><img src="./img/layout/logo.png" alt="중소벤처기업부"></a></h1>
+    <nav id="gnb">
+      <label for="gnbcheck" id="mobile_close_btn"></label>
+      <ul>
+        <li><a href="#intro">Home</a></li>
+        <li><a href="#myprofile">영화제 소개</a></li>
+        <li><a href="#portfolio">공모요강</a></li>
+        <li><a href="#myskill">작품접수</a></li>
+        <li><a href="#ourclient">커뮤니티</a></li>
+        <li><a href="#mytools">투표하기</a></li>
+        <!-- <li><a href="#project">Project</a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <!-- mainbanner area-->
+  <section id="intro">
+
+    <div class="intro_wrap">
+      <div class="intro_left">
+        <div class="title_1">
+          <img src="./img/layout/section01_tit01.png" alt="">
+        </div>
+        <span class="title_2">
+          <img src="./img/layout/section01_tit02.png" alt="소담영화제">
+        </span>
+        <img src="./img/layout/section01_tit01_mo.png" alt="소담영화제">
+        <div class="title_3">
+          <p><span>공모기간 : </span><em>2021.5.10.</em><span>(월)~</span><em>6.11.</em><span>(금)</span></p>
+          <p><span>공모주제 : </span><em>소상공인 [코로나 극복기]를 담다</em></p>
+        </div>
+      </div>
+      <div class="intro_right">
+        <div id="player_container">
+          <div id="player"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- section content area-->
+  <main>
+
+    <!-- gnb menu section -->
+
+    <section id="notice">
+      <div>
+        <img src="./img/layout/section01_img01.png" alt="notice">
+      </div>
+      <div class="notice_inner">
+      <div class="notice_wrap">
+        <strong class="tit">Notice</strong>
+        <div class="notice_slide">
+          <a href="/notice/view/id/15" class="notice_t"><span>[보도자료] 작지만 강한 소상공인 이야기‘소담 영화제’영상 공모<em class="date">21-05-10</em></span></a>
+        </div>
+    </div>
+  </div>
+    </section>
+
+   <!-- my tools -->
+        <section id="mytools">
+          <div class="schedule_title">
+            <strong class="tit"><span>SODAM FILM</span><em>심사일정</em></strong>
+          </div>
+          <div class="row">
+            <div class="column">
+              <div class="inner first">
+                <h3>작품접수</h3>
+                <p>5월10일(월) - 6월11일(금)
+                  </p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="inner">
+                <h3>1차 예선심사</h3>
+                <p>6월14일(월) - 6월23일(수)
+                  </p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="inner">
+                <h3>전문가 평가</h3>
+                <p>6월24일(목) - 7월5일(월)
+                  </p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="inner">
+                <h3>수상작 발표</h3>
+                <p>7월7일(수)
+                </p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="inner">
+                <h3>시상식</h3>
+                <p>7월11일(일)<br>
+                  *상기일정 변동가능
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- timer -->
+        <section id="timer">
+          <div class="timer_inner">
+            <h3>접수마감까지</h3>
+            <ul class="count_list">
+              <li><span class="counter" id="days">22 .</span><em>일</em>
+              </li>
+              <li><div><span class="counter" id="hour">12 .</span><em>시</em></div></li>
+              <li><div><span class="counter" id="minutes">14 .</span><em>분</em></div></li>
+              <li><div><span class="counter" id="seconds">44</span><em>초</em></div></li>
+           </ul>
+          </div>
+        </section>
+
+      <!-- about -->
+        <section id="about">
+          <div class="inner">
+            <div class="box">
+              <div class="text_box">
+                <span>SODAM FILM</span>
+                <span>SODAM</span>
+                <h2>접수신청</h2>
+                <p class="subtitle">
+                  5월 10일(월)~6월 11일(금)까지 접수 가능합니다.
+                </p>
+                <a href="#" class="common_btn">청소년부<i class="fas fa-film"></i></a>
+                <a href="#" class="common_btn">일반부<i class="fas fa-film"></i></a>
+              </div>
+            </div>
+            <div class="box img">
+              <img src="./img/layout/half_img01.png" alt="접수신청">
+            </div>
+          </div>
+        </section>
+        <section id="about">
+          <div class="inner inner_2">
+            <div class="box">
+              <div class="text_box">
+                <span>SODAM FILM</span>
+                <span>SODAM</span>
+                <h2>접수신청</h2>
+                <p class="subtitle">
+                  5월 10일(월)~6월 11일(금)까지 접수 가능합니다.
+                </p>
+                <a href="#" class="common_btn">청소년부<i class="fas fa-film"></i></a>
+                <a href="#" class="common_btn">일반부<i class="fas fa-film"></i></a>
+              </div>
+            </div>
+            <div class="box img">
+              <img src="./img/layout/half_img02.png" alt="접수신청">
+            </div>
+          </div>
+        </section>
+
+     <!-- my project -->
+    <section id="project">
+      <div class="text_box">
+          <div class="title_wrap">
+            <span>FAQ</span>
+            <h2>소담영화제의 궁금증을 풀어드립니다.</h2>
+         </div>
+      <div class="search_box">
+          <strong>FAQ 검색</strong>
+          <input type="text" title="FAQ검색" name="search_keyword" placeholder="궁금하신 내용의 키워드를 검색하세요.">
+          <button type="submit"><span class="hide">검색</span>
+            <i class="fas fa-search"></i></button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="inner">
+            <h3>여러 작품을 제출해도 되나요?</h3>
+            <p>네, 중복 접수 가능합니다. 단, 중복 수상은 불가합니다. 동일인의 다수 작품이 수상 범위에 들게 되면 최고 등수를 우선순위로 선정합니다.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="inner">
+
+            <h3>영상 분량에 제한이 있나요?</h3>
+            <p>1분(60초) 이내의 영상으로 응모해 주세요. 1분을 초과할 경우 평가 시 감점 요인이 될 수 있으니 유의해 주세요. <br>
+              ※ (접수 규격) mp4, 960*720&nbsp;이상, 500MB&nbsp;이하, 1분 이내</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="inner">
+
+            <h3>공모전 접수 마감은 언제까지...</h3>
+            <p> 아니오, 출품작은 타 공모전, 대회 등에 수상하지 않은 순수 창작물이어야 하며 표절, 도용, 모방, 대리작으로 인정되는 작품은 당선된 이후라도 무효 처리 및 상금 회수 등의 조치가 이뤄질 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="inner">
+
+            <h3>타 공모전에서 수상한 작품을..</h3>
+            <p>아니오, 출품작은 타 공모전, 대회 등에 수상하지 않은 순수 창작물이어야 하며 표절, 도용, 모방, 대리작으로 인정되는 작품은 당선된 이후라도 무효 처리 및 상금 회수 등의 조치가 이뤄질 수 있습니다.</p>
+          </div>
+        </div>
+    </section>
+
+
+
+  </main>
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="footer_top">
+      <!-- footer top area -->
+      <div class="container">
+        <div class="row">
+          <div class="column footer_logo">
+            <!-- footer logo -->
+            <a href="#"><img src="./img/layout/footer_logo.png" alt=""></a>
+            <a href="#"><img src="./img/layout/footer_logo02.png" alt=""></a>
+          </div>
+          <div class="column">
+            <!-- contact us -->
+            <h4>개인정보처리방침</h4>
+            <h4>이메일정보무단수집거부</h4>
+            <ul class="sns">
+              <li><a href="#">
+                <img src="./img/layout/sns01.png" alt="">
+              </a></li>
+              <li><a href="#">
+                <img src="./img/layout/sns02.png" alt="">
+              </a></li>
+              <li><a href="#">
+                <img src="./img/layout/sns03.png" alt="">
+              </a></li>
+              <li><a href="#">
+                <img src="./img/layout/sns04.png" alt="">
+              </a></li>
+            </ul>
+          </div>
+          <div class="column news">
+            <!-- news -->
+            <div class="footer_right">
+              <p>사무 운영국 문의전화번호: <a href="tel:02-6395-3221">02) 6395-3121</a><br /> COPYRIGHT&copy;중소벤처기업부. ALL RIGHTS RESERVED.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -30,3 +30,48 @@ a:hover {
 input:-webkit-autofill {
   -webkit-text-fill-color: transparent !important;
 }
+
+html,
+body {
+  height: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  transition: 0.5s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span,
+em {
+  color: #fff;
+}
+
+em {
+  font-style: normal;
+}
+
+input:focus {
+  outline: none;
+}
+
+select:focus {
+  outline: none;
+}
+
+button {
+  background-color: transparent;
+  border-style: none;
+  padding: 0;
+  cursor: pointer;
+}

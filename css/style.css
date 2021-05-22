@@ -3,9 +3,6 @@
 @font-face {
   font-family: 'NanumSquar';
   src: url('../fonts/NanumSquareR.otf');
-  /* src: url("../fonts/NanumSquareL.otf");
-  src: url("../fonts/NanumSquareEB.otf");
-  src: url("../fonts/NanumSquareB.otf"); */
 }
 
 html,
@@ -43,6 +40,11 @@ em {
   font-style: normal;
 }
 
+body {
+  font-family: 'NanumSquar';
+  color: #081b28;
+}
+
 input:focus {
   outline: none;
 }
@@ -59,6 +61,7 @@ button {
 }
 
 /* common UI */
+
 .button {
   font-size: 16px;
   font-weight: 700;
@@ -99,7 +102,6 @@ input:focus {
   align-items: center;
   justify-content: center;
   transform: translateY(-50%);
-  /* 노출 비노출 */
   opacity: 0;
   transition: 0.5s;
 }
@@ -124,6 +126,7 @@ input:focus {
 }
 
 /* mobile button area */
+
 input[type='checkbox']#gnbcheck {
   display: none;
 }
@@ -131,7 +134,7 @@ input[type='checkbox']#gnbcheck {
 #gnbbtn {
   position: absolute;
   top: 37px;
-  right: 10px;
+  right: 20px;
   width: 32px;
   height: 32px;
   z-index: 900;
@@ -140,6 +143,7 @@ input[type='checkbox']#gnbcheck {
 }
 
 /* mobile btn line style */
+
 #gnbbtn > span {
   position: absolute;
   width: 32px;
@@ -158,6 +162,7 @@ input[type='checkbox']#gnbcheck {
 }
 
 /* mobile close button */
+
 #mobile_close_btn {
   display: none;
   position: absolute;
@@ -184,6 +189,7 @@ input[type='checkbox']#gnbcheck {
 }
 
 /* header */
+
 #header {
   position: fixed;
   width: 100%;
@@ -206,6 +212,7 @@ input[type='checkbox']#gnbcheck {
 }
 
 /* top logo */
+
 #top_logo {
   float: left;
 }
@@ -225,6 +232,7 @@ input[type='checkbox']#gnbcheck {
 }
 
 /* gnb */
+
 #gnb {
   float: right;
 }
@@ -287,6 +295,17 @@ section {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes textMoveAni {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -382,7 +401,7 @@ section#intro img.aniOn {
   height: 944px;
   z-index: -1;
   animation: lightEffect 4s ease-in-out infinite alternate;
-  animation-delay: 1s;
+  animation-delay: 1.7s;
 }
 
 .title_2::before {
@@ -399,10 +418,14 @@ section#intro img.aniOn {
 
 #intro > div > div.intro_left .title_3 {
   opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.6s;
 }
 
 #intro > div > div.intro_left .title_3.aniOn {
   opacity: 1;
+  transform: translateX(0);
 }
 
 .intro_left span {
@@ -801,20 +824,23 @@ section#project .search_box strong {
   color: #f38200;
   font-size: 30px;
   position: absolute;
-  left: 20%;
+  left: 0;
   bottom: 34px;
 }
 
 section#project button {
   position: absolute;
-  right: 330px;
+  /* right: 330px; */
   bottom: 30px;
+  font-size: 25px;
+  color: #fff;
+  right: 0;
 }
 
 section#project input {
   background: none;
   border: 0;
-  width: 40%;
+  width: 100%;
   font-size: 22px;
   height: 6rem;
   border-bottom: 1px solid #fff;
@@ -934,7 +960,7 @@ section .row > h2:after {
 section .row {
   opacity: 0;
   transform: translateY(500px);
-  transition: 0.5s;
+  transition: 0.8s;
 }
 
 section.active .row {
@@ -943,7 +969,6 @@ section.active .row {
 }
 
 /* transition */
-/* progressbar common effect */
 section.active .row .column .inner.progressbar .items_wrap .items {
   opacity: 1;
 }
@@ -1025,6 +1050,7 @@ section .row .column .inner img {
 }
 
 /* footer area */
+
 #footer {
   background: #000;
   color: #fff;
@@ -1038,8 +1064,8 @@ section .row .column .inner img {
 
 /* footer conatiner common style */
 /* footer_top, #footer */
+
 #footer .container {
-  /* footer_top의 .container와 #footer의 자식요소 .container의 공통스타일 적용 */
   margin: 0 auto;
   width: 1140px;
 }
@@ -1096,6 +1122,7 @@ section .row .column .inner img {
 }
 
 /* footer logo */
+
 #footer .container .row .column.footer_logo h3 {
   font-size: 34px;
   font-weight: 700px;
@@ -1117,6 +1144,7 @@ section .row .column .inner img {
 }
 
 /* h4 before, after common style */
+
 #footer .container .row .column h4:before,
 #footer .container .row .column h4:after {
   content: '';
@@ -1137,6 +1165,7 @@ section .row .column .inner img {
 }
 
 /* lsit */
+
 #footer .container .row .column ul li {
   padding: 10px 0;
 }
@@ -1161,7 +1190,7 @@ section .row .column .inner img {
 }
 
 #footer .container .row .column.news input[type='submit'] {
-  background: #18d26e;
+  background: #f38200;
   border: 0;
   width: 35%;
   padding: 6px 0;
@@ -1199,6 +1228,7 @@ section .row .column .inner img {
   font-weight: 700;
   font-size: 60px;
   text-align: center;
+  animation: textMoveAni 0.6s ease-in-out;
 }
 
 .visual_wrap .inner h2 em {
@@ -1247,7 +1277,6 @@ section .row .column .inner img {
 
 .inner #lnb {
   width: 220px;
-  /* margin: 0 50px; */
   float: left;
 }
 
@@ -1388,6 +1417,7 @@ section .row .column .inner img {
 }
 
 /* reception */
+
 #about.reception {
   background: none;
 }
@@ -1578,6 +1608,7 @@ table#list {
 }
 
 /* responsive style */
+
 @media screen and (max-width: 1200px) {
   #gnb ul li a {
     font-size: 16px;
@@ -1680,16 +1711,12 @@ table#list {
     position: initial;
   }
 
-  section#project input {
+  /* section#project input {
     width: initial;
-  }
+  } */
 
   section#project input::placeholder {
     font-size: 15px;
-  }
-
-  section#project button {
-    right: -130px;
   }
 
   /* timer */
@@ -1778,6 +1805,7 @@ table#list {
 }
 
 /* tablet pc */
+
 @media screen and (max-width: 767px) {
   section .row .column {
     flex: 100%;
@@ -1789,6 +1817,7 @@ table#list {
   }
 
   /* mobile gnb */
+
   #gnbbtn {
     display: block;
   }
@@ -1873,6 +1902,7 @@ table#list {
   }
 
   /* subpage */
+
   .content_wrap article h4 {
     font-size: 22px;
   }
@@ -1895,6 +1925,7 @@ table#list {
 }
 
 /* mobile */
+
 @media screen and (max-width: 480px) {
   .intro_wrap {
     padding-top: 0;
@@ -2037,5 +2068,9 @@ table#list {
 
   .page_info span {
     font-size: 14px;
+  }
+
+  .vote_wrap #lnb ul li {
+    padding-right: 0;
   }
 }

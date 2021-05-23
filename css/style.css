@@ -830,17 +830,16 @@ section#project .search_box strong {
 
 section#project button {
   position: absolute;
-  /* right: 330px; */
   bottom: 30px;
   font-size: 25px;
   color: #fff;
-  right: 0;
+  right: 87px;
 }
 
 section#project input {
   background: none;
   border: 0;
-  width: 100%;
+  width: 50%;
   font-size: 22px;
   height: 6rem;
   border-bottom: 1px solid #fff;

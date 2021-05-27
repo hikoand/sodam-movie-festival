@@ -90,6 +90,7 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerReady(event) {
   event.target.playVideo();
+  player.mute();
 }
 
 var done = false;

@@ -197,7 +197,7 @@ input[type='checkbox']#gnbcheck {
   top: 0;
   background: rgb(0, 0, 0);
   z-index: 800;
-  padding: 30px 0;
+  padding: 18px 0;
   background-color: transparent;
   transition: all 0.5s ease-in-out;
   opacity: 0;
@@ -452,7 +452,7 @@ section#intro img.aniOn {
 /* notice */
 section#notice {
   display: block;
-  height: 550px;
+  height: 330px;
   min-height: initial;
   overflow-x: hidden;
   padding: 60px 20px 0 20px;
@@ -461,7 +461,8 @@ section#notice {
 section#notice img {
   position: absolute;
   right: -200px;
-  bottom: 0;
+  bottom: -67px;
+  z-index: 300;
 }
 
 .notice_inner {
@@ -500,7 +501,6 @@ section#notice img {
   text-overflow: ellipsis;
   display: block;
   overflow: hidden;
-  white-space: nowrap;
   display: inline-block;
 }
 
@@ -544,7 +544,7 @@ section#mytools {
 
 #mytools .tit em {
   position: absolute;
-  top: 215px;
+  top: 313px;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 5.5rem;
@@ -834,7 +834,7 @@ section#project button {
   bottom: 30px;
   font-size: 25px;
   color: #fff;
-  right: 87px;
+  right: 64px;
 }
 
 section#project input {
@@ -1226,7 +1226,7 @@ section .row .column .inner img {
 
 .visual_wrap .inner h2 {
   font-weight: 700;
-  font-size: 60px;
+  font-size: 56px;
   text-align: center;
   animation: textMoveAni 0.6s ease-in-out;
 }
@@ -1333,6 +1333,7 @@ section .row .column .inner img {
 
 .content_text {
   margin-top: 120px;
+  padding: 0 20px;
 }
 .content_text p {
   margin-top: 2px;
@@ -1548,6 +1549,8 @@ section .row .column .inner img {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  vertical-align: bottom;
+  height: 40px;
 }
 
 table#list {
@@ -1661,6 +1664,10 @@ table#list {
     font-size: 25px;
   }
 
+  section#notice img {
+    display: none;
+  }
+
   section#mytools {
     padding: 80px;
     padding-bottom: 100px;
@@ -1670,19 +1677,14 @@ table#list {
     top: 390px;
   }
 
-  .notice_wrap {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
   .notice_wrap .tit {
-    font-size: 18px;
+    font-size: 20px;
     padding-right: 10px;
   }
 
   .notice_slide span,
   .notice_slide em {
-    font-size: 16px;
+    font-size: 20px;
     padding-top: 10px;
   }
 
@@ -1693,7 +1695,7 @@ table#list {
   section#mytools .row .column .inner {
     height: 180px;
     width: 180px;
-    margin: 5px auto;
+    margin: 5px 10px;
   }
 
   section#mytools .row .column .inner h3 {
@@ -1733,8 +1735,12 @@ table#list {
   }
 
   #footer .container .row .column {
-    flex: 50%;
+    flex-direction: column;
     padding: 15px 15px;
+  }
+
+  .footer_logo a {
+    padding-bottom: 20px;
   }
 
   #project .row {
@@ -1753,12 +1759,13 @@ table#list {
   section#project .inner {
     height: 250px;
     padding: 60px 20px;
+    margin: 15px 30px;
   }
 
   /* subpage */
 
   .sub_wrap > div > div > article > h4 {
-    font-size: 28px;
+    font-size: 23px;
   }
 
   div.content_bg > h2 {
@@ -1816,13 +1823,12 @@ table#list {
 /* tablet pc */
 
 @media screen and (max-width: 767px) {
-  section .row .column {
-    flex: 100%;
+  section#mytools .row .column {
+    flex: initial;
   }
 
   section#ourclient .row .column,
   section#mytools .row .column {
-    flex: 50%;
     margin-top: 10px;
   }
 
@@ -1915,6 +1921,8 @@ table#list {
 
   .content_wrap article h4 {
     font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 15px;
   }
 
   div.content_bg > h2 {
@@ -1978,6 +1986,14 @@ table#list {
     width: 50%;
   }
 
+  section#project .inner {
+    padding: 28px 20px;
+  }
+
+  section#project .inner p {
+    width: initial;
+  }
+
   .timer_inner ul li span {
     font-size: 36px;
   }
@@ -1996,8 +2012,12 @@ table#list {
     font-size: 29px;
   }
 
+  div.content_bg {
+    height: 300px;
+  }
+
   div.content_bg > h2 {
-    font-size: 27px;
+    font-size: 20px;
   }
 
   .contant_img_bottom {
@@ -2010,21 +2030,23 @@ table#list {
 @media screen and (max-width: 640px) {
   .visual_wrap .inner h2 {
     font-weight: 700;
-    font-size: 40px;
+    font-size: 32px;
     text-align: center;
   }
 
-  #lnb ul li a span {
+  #lnb .lnb_menu > li > a > span {
     font-size: 17px;
+  }
+
+  #lnb ul li a span {
+    font-size: 16px;
   }
 
   .sub_wrap .inner {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 40px;
-    padding-left: 0;
+    padding: 30px 10px 40px 10px;
   }
 
   .content_wrap header h3 {
@@ -2043,7 +2065,10 @@ table#list {
 
   #lnb ul li {
     display: inline-block;
-    padding-right: 20px;
+  }
+
+  .content_img_top {
+    display: none;
   }
 
   .content_wrap {
@@ -2053,17 +2078,12 @@ table#list {
 
   .content_text {
     padding-top: 50px;
-    /* width: 400px; */
-    width: 100%;
+    margin-top: 0;
   }
 
   .content_text p {
     font-size: 13px;
     text-align: center;
-  }
-
-  .content_text {
-    padding-top: 50px;
   }
 
   div.contant_img_bottom > img {

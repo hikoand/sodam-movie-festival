@@ -9,6 +9,43 @@
 
 - CSS transform을 이용한 반짝이는 밤하늘 background
 
+```css
+
+가상선택자 ::before을 사용해 투명 bg로 된 별을 깔아주고 z-index -10을 줌
+
+section::before {
+  height: 100vh;
+  width: 100%;
+  background: url('../img/layout/section01_before.png');
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  transform-origin: 50% 50%;
+  animation: loadingStar 1.5s ease-in-out;
+}
+
+가상선택자 ::after을 사용해 배경색과 같은 문양을 넣고 rotation 시킴<br>
+z-index -9로 설정해 ::before에 깔아준 별 위로 올려 별을 노출시켰다 숨김을반복
+
+section::after {
+  background: url('../img/layout/section01_after.png');
+  animation: rotation 80s linear infinite;
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  z-index: -9;
+}
+```
+
 - Date 객체를 이용한 D-day 카운팅
 
 ```javascript

@@ -11,7 +11,7 @@
 
 ```css
 
-// 가상선택자 ::before을 사용해 투명 bg로 된 별을 깔아주고 z-index -10을 줌
+/* 가상선택자 ::before을 사용해 투명 bg로 된 별을 깔아주고 z-index -10을 줌 */
 
 section::before {
   height: 100vh;
@@ -27,8 +27,8 @@ section::before {
   animation: loadingStar 1.5s ease-in-out;
 }
 
-// 가상선택자 ::after을 사용해 배경색과 같은 문양을 넣고 rotation 시킴
-// z-index -9로 설정해 ::before에 깔아준 별 위로 올려 별을 노출시켰다 숨김을반복
+/* 가상선택자 ::after을 사용해 배경색과 같은 문양을 넣고 rotation 시킴 */
+/* z-index -9로 설정해 ::before에 깔아준 별 위로 올려 별을 노출시켰다 숨김을반복 */
 
 section::after {
   background: url('../img/layout/section01_after.png');
